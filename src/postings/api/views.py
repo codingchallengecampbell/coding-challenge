@@ -5,9 +5,9 @@ from postings.models import Post
 from .serializers import PostSerializer
 
 class PostRudView(generics.RetrieveUpdateDestroyAPIView):
-    pass
+  
     lookup_field    = 'pk'
-    serializer_class = Post
+    serializer_class = PostSerializer
     # queryset        = Post.objects.all()
 
     def get_queryset(self):
