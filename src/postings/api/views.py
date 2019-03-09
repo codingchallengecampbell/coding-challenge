@@ -1,10 +1,12 @@
-from rest_framework import generics
+from rest_framework import generics, mixins
 
 
 from postings.models import Post
 from .serializers import PostSerializer
 
-class PostAPIView(generics.CreateAPIView):
+
+
+class PostAPIView(mixins.CreateModelMixin, generics.ListAPIView):
   
     lookup_field    = 'pk' 
     serializer_class = PostSerializer
@@ -15,6 +17,11 @@ class PostAPIView(generics.CreateAPIView):
     
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+    
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+
+
 
 class PostRudView(generics.RetrieveUpdateDestroyAPIView):
   
