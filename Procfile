@@ -1,1 +1,1 @@
-web: gunicorn coding-challenge.wsgi --log-file -
+web: gunicorn src.wsgi 
