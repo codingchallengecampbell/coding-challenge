@@ -26,7 +26,8 @@ SECRET_KEY = 'dt_al!w$jt$1h)&u@py6va6flc6u3n=cpqxcm!ctr2iywvgjvy'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'campbelldjangoapp.herokuapp.com'
+    'campbelldjangoapp.herokuapp.com',
+    '127.0.0.1'
 ]
 
 

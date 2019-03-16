@@ -18,8 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
- url(r'^api/postings/', include('postings.api.urls')),
-   url(r'^api-auth/', include('rest_framework.urls'))
+ url(r'^api/postings/', include('postings.api.urls'))
 
 # url(r'^api/postings/', include('postings.api.urls', namespace='api-postings')),
 ]
