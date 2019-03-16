@@ -25,7 +25,9 @@ SECRET_KEY = 'dt_al!w$jt$1h)&u@py6va6flc6u3n=cpqxcm!ctr2iywvgjvy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'campbelldjangoapp.herokuapp.com'
+]
 
 
 # Application definition
